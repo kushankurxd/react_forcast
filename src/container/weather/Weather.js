@@ -13,6 +13,7 @@ class Weather extends React.Component {
   constructor(props) {
     super(props);
     props.onInitCurrentWeather();
+    props.onInitHourlyWeather();
   }
 
   render() {
@@ -31,6 +32,7 @@ class Weather extends React.Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     onInitCurrentWeather: () => dispatch(actions.initCurrentWeatherAsync()),
+    onInitHourlyWeather: () => dispatch(actions.initHourlyWeatherAsync()),
   };
 };
 

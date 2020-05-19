@@ -1,45 +1,20 @@
+import * as actionTypes from "../actions/actionTypes";
+
 const initialState = {
-  data: [
-    {
-      time: "5 am",
-      icon: "01",
-      temperature: "24",
-    },
-    {
-      time: "8 am",
-      icon: "02",
-      temperature: "24",
-    },
-    {
-      time: "11 am",
-      icon: "03",
-      temperature: "24",
-    },
-    {
-      time: "01 pm",
-      icon: "09",
-      temperature: "24",
-    },
-    {
-      time: "03 pm",
-      icon: "11",
-      temperature: "24",
-    },
-    {
-      time: "05 pm",
-      icon: "01",
-      temperature: "24",
-    },
-    {
-      time: "08 pm",
-      icon: "04",
-      temperature: "24",
-    },
-  ],
+  data: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.INIT_HOURLY_WEATHER:
+      const data = action.data.map((item) => ({
+        time: item.dt,
+        icon: item.weather[0].icon,
+        temperature: parseInt(item.main.temp - 273.15),
+      }));
+      return {  
+        data: data,
+      };
     default:
       return state;
   }
