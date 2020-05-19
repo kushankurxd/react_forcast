@@ -2,13 +2,22 @@ import React from "react";
 
 import "./LocationAndDate.css";
 
+import { connect } from "react-redux";
+
 const locationAndDate = (props) => {
   return (
     <div className="location-and-date">
-      <h1 className="location-and-date__location">London, UK</h1>
-      <div>Sunday 4th August</div>
+      <h1 className="location-and-date__location">{props.location}</h1>
+      <div>{props.date}</div>
     </div>
   );
 };
 
-export default locationAndDate;
+const mapStateToProps = (state) => {
+  return {
+    location: state.location,
+    date: state.date,
+  };
+};
+
+export default connect(mapStateToProps)(locationAndDate);
