@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+.body {
+  padding: 12px;
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  height: 100%;
+  /* background: linear-gradient(
+    to bottom,
+    rgb(43, 50, 178) 0%,
+    rgb(20, 136, 204) 100%
+  ); */
+  background-image: url(../../img/weather.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (min-width: 700px) {
+  .body {
+    padding: 20px;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 920px) {
+  .main-container {
+    width: 900px;
+    margin: 8px auto;
+    font-size: 1em;
+  }
+}
