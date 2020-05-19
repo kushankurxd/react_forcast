@@ -26,6 +26,7 @@
 }
 
 .current-temperature__summary {
+  text-transform: capitalize;
   margin-top: -0.5em;
   margin-left: -0.6em;
   text-align: center;

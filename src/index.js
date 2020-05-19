@@ -7,6 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 import weatherReducer from "./store/reducers/currentWeather";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
+import thunk from "redux-thunk";
 
 const logger = (store) => {
   return (next) => {
@@ -19,7 +20,7 @@ const logger = (store) => {
   };
 };
 
-const store = createStore(weatherReducer, applyMiddleware(logger));
+const store = createStore(weatherReducer, applyMiddleware(logger,thunk));
 
 ReactDOM.render(
   <Provider store={store}>

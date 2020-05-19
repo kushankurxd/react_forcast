@@ -41,6 +41,17 @@ const currentWeather = (props) => {
       icon = null;
   }
 
+  const sunriseUTC = new Date(props.sunrise * 1000);
+  const sunriseHours = (sunriseUTC.getHours() < 10 ? "0" : "") +sunriseUTC.getHours();
+  const sunriseMinutes =(sunriseUTC.getMinutes() < 10 ? "0" : "") +sunriseUTC.getMinutes();
+  const sunriseFullTime = sunriseHours + ":" + sunriseMinutes;
+
+  const sunsetUTC = new Date(props.sunset * 1000);
+  const sunsetHours = (sunsetUTC.getHours() < 10 ? "0" : "") +sunsetUTC.getHours();
+  const sunsetMinutes =(sunsetUTC.getMinutes() < 10 ? "0" : "") +sunsetUTC.getMinutes();
+  const sunsetFullTime = sunsetHours + ":" + sunsetMinutes;
+
+
   return (
     <React.Fragment>
       <div className="current-temperature">
@@ -69,9 +80,9 @@ const currentWeather = (props) => {
           <div className="current-stats__label">Rain</div>
         </div>
         <div>
-          <div className="current-stats__value">{props.sunrise}</div>
+          <div className="current-stats__value">{sunriseFullTime}</div>
           <div className="current-stats__label">Sunrise</div>
-          <div className="current-stats__value">{props.sunset}</div>
+          <div className="current-stats__value">{sunsetFullTime}</div>
           <div className="current-stats__label">Sunset</div>
         </div>
       </div>

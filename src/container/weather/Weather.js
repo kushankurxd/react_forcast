@@ -6,7 +6,7 @@ import LocationAndDate from "../../component/location-and-date/LocationAndDate";
 import CurrentWeather from "../../component/current-weather/CurrentWeather";
 
 import { connect } from "react-redux";
-import * as actionTypes from "../../store/actions/actionTypes";
+import * as actions from "../../store/actions/index";
 
 class Weather extends React.Component {
   constructor(props) {
@@ -28,8 +28,7 @@ class Weather extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onInitCurrentWeather: () =>
-      dispatch({ type: actionTypes.INIT_CURRENT_WEATHER }),
+    onInitCurrentWeather: () => dispatch(actions.initCurrentWeatherAsync()),
   };
 };
 
