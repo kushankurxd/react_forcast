@@ -8,6 +8,7 @@ import HourlyWeather from "../../component/hourly-weather/HourlyWeather";
 
 import { connect } from "react-redux";
 import * as actions from "../../store/actions/index";
+import FiveDayWeather from "../../component/five-day-weather/FiveDayWeather";
 
 class Weather extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Weather extends React.Component {
           <LocationAndDate />
           <CurrentWeather />
           <HourlyWeather />
+          <FiveDayWeather />
         </div>
       </div>
     );

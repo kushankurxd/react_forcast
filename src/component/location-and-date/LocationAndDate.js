@@ -4,34 +4,7 @@ import "./LocationAndDate.css";
 
 import { connect } from "react-redux";
 
-const dayOfWeekAsString = (dayIndex) => {
-  return [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ][dayIndex];
-};
-
-const monthAsString = (monthIndex) => {
-  return [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ][monthIndex];
-};
+import {dayOfWeekAsString, monthAsString} from "../../utils/dateAsString";
 
 const nth = (d) => {
   if (d > 3 && d < 21) return "th";

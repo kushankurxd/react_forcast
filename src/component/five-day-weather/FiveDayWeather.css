@@ -1,0 +1,22 @@
+/* next-5-days */
+.next-5-days {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.next-5-days__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.next-5-days__heading {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .next-5-days__heading {
+    font-size: 1.125em;
+  }
+}
