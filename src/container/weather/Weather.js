@@ -4,6 +4,7 @@ import "./Weather.css";
 
 import LocationAndDate from "../../component/location-and-date/LocationAndDate";
 import CurrentWeather from "../../component/current-weather/CurrentWeather";
+import HourlyWeather from "../../component/hourly-weather/HourlyWeather";
 
 import { connect } from "react-redux";
 import * as actions from "../../store/actions/index";
@@ -20,6 +21,7 @@ class Weather extends React.Component {
         <div className="main-container">
           <LocationAndDate />
           <CurrentWeather />
+          <HourlyWeather />
         </div>
       </div>
     );

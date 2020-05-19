@@ -65,8 +65,8 @@ const locationAndDate = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    location: state.location,
-    date: state.date,
+    location: state.current.location,
+    date: state.current.date,
   };
 };
 

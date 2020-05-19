@@ -92,15 +92,15 @@ const currentWeather = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    icon: state.icon,
-    temperature: state.temperature,
-    summary: state.summary,
-    high: state.high,
-    low: state.low,
-    wind: state.wind,
-    rain: state.rain,
-    sunrise: state.sunrise,
-    sunset: state.sunset,
+    icon: state.current.icon,
+    temperature: state.current.temperature,
+    summary: state.current.summary,
+    high: state.current.high,
+    low: state.current.low,
+    wind: state.current.wind,
+    rain: state.current.rain,
+    sunrise: state.current.sunrise,
+    sunset: state.current.sunset,
   };
 };
 
