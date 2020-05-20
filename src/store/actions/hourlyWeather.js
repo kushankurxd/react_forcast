@@ -15,10 +15,14 @@ const initFiveDaysData = (data) => {
   };
 };
 
-export const initHourlyWeatherAsync = () => {
+export const initHourlyWeatherAsync = (lat, lng) => {
   return (dispatch) => {
     Axios.get(
-      "https://api.openweathermap.org/data/2.5/forecast?lat=23.849163&lon=86.901978&appid=0c5f6dbc0ecefe58edae3e8122fd4127"
+      "https://api.openweathermap.org/data/2.5/forecast?lat=" +
+        lat +
+        "&lon=" +
+        lng +
+        "&appid=0c5f6dbc0ecefe58edae3e8122fd4127"
     )
       .then((res) => {
         dispatch(initHourlyWeather(res.data.list.slice(0, 8)));

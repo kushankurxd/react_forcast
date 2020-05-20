@@ -9,10 +9,14 @@ const initCurrentWeather = (data) => {
   };
 };
 
-export const initCurrentWeatherAsync = () => {
+export const initCurrentWeatherAsync = (lat, lng) => {
   return (dispatch) => {
     Axios.get(
-      "https://api.openweathermap.org/data/2.5/weather?lat=23.849163&lon=86.901978&appid=0c5f6dbc0ecefe58edae3e8122fd4127"
+      "https://api.openweathermap.org/data/2.5/weather?lat=" +
+        lat +
+        "&lon=" +
+        lng +
+        "&appid=0c5f6dbc0ecefe58edae3e8122fd4127"
     )
       .then((res) => dispatch(initCurrentWeather(res.data)))
       .catch((err) => err);

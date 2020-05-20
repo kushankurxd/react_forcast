@@ -13,9 +13,23 @@ import FiveDayWeather from "../../component/five-day-weather/FiveDayWeather";
 class Weather extends React.Component {
   constructor(props) {
     super(props);
-    props.onInitCurrentWeather();
-    props.onInitHourlyWeather();
+    this.getGeolocation();
   }
+
+  getGeolocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.props.onInitCurrentWeather(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+        this.props.onInitHourlyWeather(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+      });
+    }
+  };
 
   render() {
     return (
@@ -33,8 +47,10 @@ class Weather extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onInitCurrentWeather: () => dispatch(actions.initCurrentWeatherAsync()),
-    onInitHourlyWeather: () => dispatch(actions.initHourlyWeatherAsync()),
+    onInitCurrentWeather: (lat, lng) =>
+      dispatch(actions.initCurrentWeatherAsync(lat, lng)),
+    onInitHourlyWeather: (lat, lng) =>
+      dispatch(actions.initHourlyWeatherAsync(lat, lng)),
   };
 };
 
