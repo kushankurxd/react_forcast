@@ -27,7 +27,7 @@ const hourlyWeather = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.hourly.data,
+    data: state.hourly.hourlyData,
   };
 };
 

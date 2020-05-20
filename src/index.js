@@ -10,23 +10,23 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 
-const logger = (store) => {
-  return (next) => {
-    return (action) => {
-      console.log("[Middleware] action: ", action);
-      const result = next(action);
-      console.log("[Middleware] store: ", store.getState());
-      return result;
-    };
-  };
-};
+// const logger = (store) => {
+//   return (next) => {
+//     return (action) => {
+//       console.log("[Middleware] action: ", action);
+//       const result = next(action);
+//       console.log("[Middleware] store: ", store.getState());
+//       return result;
+//     };
+//   };
+// };
 
 const rootReducer = combineReducers({
   current: currentWeather,
   hourly: hourlyWeather,
 });
 
-const store = createStore(rootReducer, applyMiddleware(logger, thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
