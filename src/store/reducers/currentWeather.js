@@ -20,7 +20,7 @@ const reducer = (state = inititalState, action) => {
       const location = action.data.name + ", " + action.data.sys.country;
       const temperature = parseInt(action.data.main.temp - 273.15);
       const high = parseInt(action.data.main.temp_max - 273.15);
-      const low = parseInt(action.data.main.feels_like - 273.15);
+      const low = parseInt(action.data.main.temp_min - 273.15);
       const wind = parseInt(action.data.wind.speed * 2.2369362921);
       return {
         ...state,

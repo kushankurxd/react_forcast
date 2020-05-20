@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
       const fiveDaysData = action.data.map((item) => ({
         date: item.dt,
         icon: item.weather[0].icon,
-        low: parseInt(item.main.feels_like - 273.15),
+        low: parseInt(item.main.temp_min - 273.15),
         high: parseInt(item.main.temp_max - 273.15),
         rain: item.clouds.all,
         wind: parseInt(item.wind.speed * 2.2369362921),
