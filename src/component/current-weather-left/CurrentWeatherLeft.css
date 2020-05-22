@@ -1,6 +1,12 @@
 .current-weather__left {
   text-align: left;
-  padding-right: 120px;
+}
+
+@media screen and (min-width: 700px) {
+  .current-weather__left {
+    text-align: left;
+    position: absolute;
+  }
 }
 
 /* location-and-date */
@@ -27,7 +33,7 @@
 }
 
 .current-temperature__value {
-  margin: 10px 0;
+  margin: 16px 0;
   font-size: 3em;
   font-weight: 800;
 }

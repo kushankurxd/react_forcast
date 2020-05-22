@@ -6,12 +6,10 @@ const inititalState = {
   icon: "",
   temperature: "",
   summary: "",
-  high: "",
-  low: "",
+  humidity: "",
+  airPressure: "",
   wind: "",
   rain: "",
-  sunrise: "",
-  sunset: "",
 };
 
 const reducer = (state = inititalState, action) => {
@@ -19,22 +17,21 @@ const reducer = (state = inititalState, action) => {
     case actionTypes.INIT_CURRENT_WEATHER:
       const location = action.data.name + ", " + action.data.sys.country;
       const temperature = parseInt(action.data.main.temp - 273.15);
-      const high = parseInt(action.data.main.temp_max - 273.15);
-      const low = parseInt(action.data.main.temp_min - 273.15);
-      const wind = parseInt(action.data.wind.speed * 2.2369362921);
+      const airPressure = (action.data.main.pressure * 0.0145038).toFixed(3);
+      const wind = parseInt(
+        action.data.wind.speed * 2.2369362921 * 1.609344
+      ).toFixed(1);
       return {
         ...state,
         location: location,
         date: action.data.dt,
         icon: action.data.weather[0].icon,
         temperature: temperature,
-        summary: action.data.weather[0].description,
-        high: high,
-        low: low,
+        summary: action.data.weather[0].main,
+        humidity: action.data.main.humidity,
+        airPressure: airPressure,
         wind: wind,
         rain: action.data.clouds.all,
-        sunrise: action.data.sys.sunrise,
-        sunset: action.data.sys.sunset,
       };
     default:
       return state;

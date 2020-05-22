@@ -4,40 +4,55 @@ import "./CurrentWeatherRight.css";
 
 import { connect } from "react-redux";
 
-const currentWeather = (props) => {
-  const sunriseUTC = new Date(props.sunrise * 1000);
-  const sunriseHours =
-    (sunriseUTC.getHours() < 10 ? "0" : "") + sunriseUTC.getHours();
-  const sunriseMinutes =
-    (sunriseUTC.getMinutes() < 10 ? "0" : "") + sunriseUTC.getMinutes();
-  const sunriseFullTime = sunriseHours + ":" + sunriseMinutes;
+import humidity from "../../svg/humidity.svg";
+import airPressure from "../../svg/air-pressure.svg";
+import rain from "../../svg/rain.svg";
+import wind from "../../svg/wind.svg";
 
-  const sunsetUTC = new Date(props.sunset * 1000);
-  const sunsetHours =
-    (sunsetUTC.getHours() < 10 ? "0" : "") + sunsetUTC.getHours();
-  const sunsetMinutes =
-    (sunsetUTC.getMinutes() < 10 ? "0" : "") + sunsetUTC.getMinutes();
-  const sunsetFullTime = sunsetHours + ":" + sunsetMinutes;
+const currentWeather = (props) => {
 
   return (
     <div className="current-stats">
-      <div>
-        <div className="current-stats__value">{props.high}&deg;</div>
-        <div className="current-stats__label">High</div>
-        <div className="current-stats__value">{props.low}&deg;</div>
-        <div className="current-stats__label">Low</div>
-      </div>
-      <div>
-        <div className="current-stats__value">{props.wind}mph</div>
-        <div className="current-stats__label">Wind</div>
-        <div className="current-stats__value">{props.rain}%</div>
-        <div className="current-stats__label">Rain</div>
-      </div>
-      <div>
-        <div className="current-stats__value">{sunriseFullTime}</div>
-        <div className="current-stats__label">Sunrise</div>
-        <div className="current-stats__value">{sunsetFullTime}</div>
-        <div className="current-stats__label">Sunset</div>
+      <div className="current-stats___conatiner">
+        <div className="current-stat">
+          <div className="current-stat__icon">
+            <img src={humidity} alt=""/>
+          </div>
+          <div className="current-stat_annot">
+            <div className="current-stat__label">Humidity</div>
+            <div className="current-stat__value">{props.humidity} %</div>
+          </div>
+        </div>
+
+        <div className="current-stat">
+          <div className="current-stat__icon">
+            <img src={airPressure} alt=""/>
+          </div>
+          <div className="current-stat_annot">
+            <div className="current-stat__label">Air Pressure</div>
+            <div className="current-stat__value">{props.airPressure} PS</div>
+          </div>
+        </div>
+
+        <div className="current-stat">
+          <div className="current-stat__icon">
+            <img src={rain} alt=""/>
+          </div>
+          <div className="current-stat_annot">
+            <div className="current-stat__label">Chance of Rain</div>
+            <div className="current-stat__value">{props.rain} %</div>
+          </div>
+        </div>
+
+        <div className="current-stat">
+          <div className="current-stat__icon">
+            <img src={wind} alt=""/>
+          </div>
+          <div className="current-stat_annot">
+            <div className="current-stat__label">Wind Speed</div>
+            <div className="current-stat__value">{props.wind} km/h</div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -45,12 +60,10 @@ const currentWeather = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    high: state.current.high,
-    low: state.current.low,
+    humidity: state.current.humidity,
+    airPressure: state.current.airPressure,
     wind: state.current.wind,
     rain: state.current.rain,
-    sunrise: state.current.sunrise,
-    sunset: state.current.sunset,
   };
 };
 
