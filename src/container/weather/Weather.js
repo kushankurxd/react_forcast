@@ -2,8 +2,8 @@ import React from "react";
 
 import "./Weather.css";
 
-import LocationAndDate from "../../component/location-and-date/LocationAndDate";
-import CurrentWeather from "../../component/current-weather/CurrentWeather";
+import CurrentWeatherLeft from "../../component/current-weather-left/CurrentWeatherLeft";
+import CurrentWeatherRight from "../../component/current-weather-right/CurrentWeatherRight";
 import HourlyWeather from "../../component/hourly-weather/HourlyWeather";
 
 import { connect } from "react-redux";
@@ -35,8 +35,8 @@ class Weather extends React.Component {
     return (
       <div className="body">
         <div className="main-container">
-          <LocationAndDate />
-          <CurrentWeather />
+          <CurrentWeatherLeft />
+          <CurrentWeatherRight />
           <HourlyWeather />
           <FiveDayWeather />
         </div>
