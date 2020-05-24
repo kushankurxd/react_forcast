@@ -19,7 +19,7 @@ const hourlyWeather = (props) => {
 
   return (
     <div className="weather-by-hour">
-      <h2 className="weather-by-hour__heading">Today's weather</h2>
+      <h2 className="weather-by-hour__heading">Hourly</h2>
       <div className="weather-by-hour__container">{weatherItems}</div>
     </div>
   );

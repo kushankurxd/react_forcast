@@ -9,9 +9,9 @@ const hourlyWeatherItem = (props) => {
   let time = null;
   if (hours > 12) {
     hours = hours - 12;
-    time = hours + " pm";
+    time = hours + " PM";
   } else {
-    time = hours + " am";
+    time = hours + " AM";
   }
 
   return (
@@ -22,7 +22,7 @@ const hourlyWeatherItem = (props) => {
         alt="Mostly sunny"
         className="weather-by-hour__icon"
       />
-      <div>{props.temperature}&deg;</div>
+      <div className="weather-by-hour__temperature">{props.temperature}&deg;C</div>
     </div>
   );
 };

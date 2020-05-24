@@ -34,6 +34,7 @@ class Weather extends React.Component {
   render() {
     return (
       <div className="body">
+        <div className="background"></div>
         <div className="main-container">
           <CurrentWeatherLeft />
           <CurrentWeatherRight />

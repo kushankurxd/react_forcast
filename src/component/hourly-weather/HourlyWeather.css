@@ -12,17 +12,14 @@
 
 .weather-by-hour__container {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .weather-by-hour__heading {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1em;
-  font-weight: normal;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
-@media screen and (min-width: 768px) {
-  .weather-by-hour__heading {
-    font-size: 1.125em;
-  }
-}

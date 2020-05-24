@@ -4,18 +4,18 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 0.3em;
-  padding: 0.8em 0;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem 0;
   width: 100%;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.2);
-  font-size: 1.19em;
+  font-size: 1.19rem;
   text-align: center;
 }
 
 .next-5-days__label {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.83em;
+  font-size: 0.83rem;
 }
 
 .next-5-days__date,
@@ -25,13 +25,13 @@
 .next-5-days__rain,
 .next-5-days__wind {
   width: 33.33333%;
-  font-size: 0.95em;
+  font-size: 1rem;
 }
 
 .next-5-days__date,
 .next-5-days__high,
 .next-5-days__low {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.6rem;
 }
 
 .next-5-days__icon img {
@@ -58,6 +58,6 @@
   }
 
   .next-5-days__icon img {
-    width: 3rem;
+    width: 2.4rem;
   }
 }

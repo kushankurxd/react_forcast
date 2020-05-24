@@ -1,7 +1,7 @@
 /* next-5-days */
 .next-5-days {
   width: 100%;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .next-5-days__container {
@@ -11,12 +11,13 @@
 
 .next-5-days__heading {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1em;
-  font-weight: normal;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
 @media screen and (min-width: 768px) {
   .next-5-days__heading {
-    font-size: 1.125em;
+    font-size: 1.125rem;
   }
 }
