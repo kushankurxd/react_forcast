@@ -14,7 +14,7 @@
 @media screen and (min-width: 700px) {
   .current-stats {
     width: 100%;
-    height: 600px;
+    height: 100vh;
     border-top: none;
     border-bottom: none;
     position: relative;
@@ -30,17 +30,17 @@
 }
 
 .current-stat {
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 .current-stat__icon {
   display: inline-block;
   vertical-align: top;
-  margin: 0 16px;
+  margin: 0 1.1rem;
 }
 
 .current-stat__icon img {
-  width: 1.6rem;
+  width: 1.7rem;
 }
 
 .current-stat_annot {
@@ -51,7 +51,7 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-align: left;
 }
 
@@ -59,4 +59,5 @@
   font-size: 1.5em;
   text-align: left;
   font-weight: 600;
+  margin-top: 0.2rem;
 }
