@@ -1,3 +1,15 @@
+## Weather Forcast 
+
+A weather simple forcast app using Reactjs and Openweathermap api.
+
+#### Screemshots
+![Annotation 2020-05-27 124521](https://user-images.githubusercontent.com/37204706/82989483-64dbb100-a018-11ea-9a8d-a20328f8fd1c.png)
+![Annotation 2020-05-27 124352](https://user-images.githubusercontent.com/37204706/82989477-6311ed80-a018-11ea-8976-a38417652a31.png)
+![Annotation 2020-05-27 124606](https://user-images.githubusercontent.com/37204706/82989485-65744780-a018-11ea-975f-b473bc46bf10.png)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
