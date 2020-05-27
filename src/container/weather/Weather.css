@@ -13,7 +13,7 @@
   color: white;
 }
 
-.background{
+.background {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -25,12 +25,17 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left 0 top 100%;
-  filter: grayscale(20%)
+  filter: grayscale(20%);
 }
 
 @media screen and (min-width: 700px) {
   .body {
     padding: 1.2rem 3.2rem;
+  }
+  .top-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

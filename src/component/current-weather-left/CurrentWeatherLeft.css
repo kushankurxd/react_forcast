@@ -2,13 +2,6 @@
   text-align: left;
 }
 
-@media screen and (min-width: 700px) {
-  .current-weather__left {
-    text-align: left;
-    position: absolute;
-  }
-}
-
 /* location-and-date */
 .location-and-date__location {
   margin: 0;

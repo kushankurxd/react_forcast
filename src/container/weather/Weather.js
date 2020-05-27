@@ -36,8 +36,10 @@ class Weather extends React.Component {
       <div className="body">
         <div className="background"></div>
         <div className="main-container">
-          <CurrentWeatherLeft />
-          <CurrentWeatherRight />
+          <div className="top-container">
+            <CurrentWeatherLeft />
+            <CurrentWeatherRight />
+          </div>
           <HourlyWeather />
           <FiveDayWeather />
         </div>

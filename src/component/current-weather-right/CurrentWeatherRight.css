@@ -13,19 +13,13 @@
 
 @media screen and (min-width: 700px) {
   .current-stats {
-    width: 100%;
-    height: 55vh;
     border-top: none;
     border-bottom: none;
-    position: relative;
   }
 
   .current-stats___conatiner {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
