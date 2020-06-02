@@ -1,6 +1,8 @@
 ## Weather Forcast 
 
-A simple weather forcast app using Reactjs and [Openweathermap api](https://openweathermap.org/api).
+A simple weather forcast app using [Reactjs](https://reactjs.org/), [Redux](https://redux.js.org/) and [Openweathermap api](https://openweathermap.org/api).
+
+#### Watch [Demo](https://react-weather-xd.netlify.app/) here.
 
 #### Screenshots
 ![Annotation 2020-05-27 124521](https://user-images.githubusercontent.com/37204706/82989483-64dbb100-a018-11ea-9a8d-a20328f8fd1c.png)
